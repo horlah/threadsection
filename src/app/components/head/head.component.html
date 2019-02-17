@@ -1,0 +1,143 @@
+<header>
+    <div class="logo icon">
+        <a routerLink="/">
+            <img src="assets/icons/small_logo.png" alt="ThreadSection Logo">
+        </a>
+    </div>
+    <nav class="nav">
+        <li>
+            <button (click)="postModal = true">Post</button>
+        </li>
+        <li>
+            <img src="assets/icons/search_button_white .png" alt="search icon">
+        </li>
+        <li>
+            <a href="#">
+                <img src="assets/icons/notification_icon.png" alt="notification icon">
+            </a>
+        </li>
+        <li (click)="showOption ? showOption = false : showOption = true">
+            <img src="assets/icons/user.png" alt="profile icon">
+            <ul class="options" *ngIf="showOption">
+                <li>
+                    <a routerLink="/profile">
+                        <img src="assets/icons/profile.png" alt="profile icon">
+                        <p>Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/profile">
+                        <img src="assets/icons/chats.png" alt="chat icon">
+                        <p>Chat</p>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/profile">
+                        <img src="assets/icons/setting.png" alt="setting icon">
+                        <p>Setting</p>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/profile">
+                        <img src="assets/icons/night_mode.png" alt="setting icon">
+                        <p>Night Mode</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="loginModalOpen = true">
+                        Login
+                    </a>
+                </li>
+                <li>
+                    <a (click)="signupModalOpen = true">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </nav>
+</header>
+
+<div class="overlay" *ngIf="loginModalOpen">
+    <div class="modal">
+        <button class="close_modal" (click)="loginModalOpen = false">×</button>
+        <form>
+            <h3>Login</h3>
+            <div class="input">
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="input">
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="input_btn">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="overlay" *ngIf="signupModalOpen">
+    <div class="modal">
+        <button class="close_modal" (click)="signupModalOpen = false">×</button>
+        <form>
+            <h3>Sign Up</h3>
+            <div class="input">
+                <label for="username"></label>
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="input">
+                <label for="email"></label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="input">
+                <label for="password"></label>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="input_btn">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+</div>
+
+<button class="add">
+    <div>+</div>
+</button>
+
+<div class="overlay" *ngIf="postModal">
+    <div class="modal post_thread">
+        <form>
+            <div class="head">
+                <button type="button" (click)="postModal = false">×</button>
+                <input type="submit" value="Post">
+            </div>
+            <div class="input">
+                <label for="post"></label>
+                <textarea id="post" placeholder="whats new?"></textarea>
+            </div>
+            <div class="media">
+                <div>
+                    <div>
+                        <img src="assets/icons/picture.png" alt="picture icon">
+                    </div>
+                    <div>
+                        <img src="assets/icons/upload_video.png" alt="video icon">
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/icons/icon1.png" alt="icon">
+                </div>
+            </div>
+            <div class="input">
+                <label for="community"></label>
+                <select name="community" id="community">
+                    <option value="one">One</option>
+                    <option value="two">Two</option>
+                    <option value="three">Three</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>

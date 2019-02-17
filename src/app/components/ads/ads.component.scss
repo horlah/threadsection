@@ -1,0 +1,13 @@
+div {
+    width: 100%;
+    margin: 20px 0;
+    background: #000;
+
+    &.small {
+        height: 100px;
+    }
+
+    &.big {
+        height: 200px;
+    }
+}

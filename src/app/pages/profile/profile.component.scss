@@ -1,0 +1,102 @@
+section.user_info {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 85%;
+
+    .user_dp {
+        width: 130px;
+        height: 130px;
+        background: #707070;
+        border-radius: 11px;
+
+        //img {
+        //    position: relative;
+        //    &::after {
+        //        content: ' ';
+        //        position: absolute;
+        //        background: #000;
+        //        top: 0;
+        //        left: 0;
+        //        right: 0;
+        //        bottom: 0;
+        //    }
+        //}
+    }
+
+    p {
+        font-size: .9rem;
+        color: var(--black);
+    }
+
+    h3 {
+        margin-top: 13px;
+        color: var(--black);
+    }
+    p.user_name {
+        color: var(--text-color-tint);
+        margin-top: 5px;
+    }
+
+    p.about {
+        margin-top: 10px;
+    }
+
+    p.posts_stat {
+        font-weight: bolder;
+        margin-top: 8px;
+        span {
+            font-weight: initial;
+            color: var(--text-color-tint);
+        }
+    }
+
+    p.wallet_digit {
+        margin-top: 13px;
+
+        span {
+            color: var(--primary-color);
+            font-weight: bolder;
+        }
+    }
+
+    .others {
+        a {
+            &:last-child {
+                div {
+                    background: var(--primary-color);
+                    color: white;
+                    padding: 8px 12px;
+                    font-size: .7rem;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+nav {
+    width: 90%;
+    margin: 20px auto;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            &:last-child {
+                width: 5px;
+                height: 5px;
+                background: var(--primary-color);
+                border-radius: 50px;
+                margin-top: 6px;
+            }
+        }
+    }
+}

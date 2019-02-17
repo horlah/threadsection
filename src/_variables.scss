@@ -1,0 +1,40 @@
+// Layout
+
+$layout-breakpoint: 800px;
+$card-max-width: 560px;
+
+@mixin desktop {
+    @media (min-width: $layout-breakpoint) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $card-max-width) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $layout-breakpoint + 1px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: $card-max-width) {
+        @content;
+    }
+}
+
+// colors
+:root {
+    --primary-color: #08B9AD;
+    --text-color: #707070;
+    --text-color-tint: #BCBCBC;
+    --black: #11001C;
+    --border-color: #EFEFEF;
+    --input-border-color: #D6D6D6;
+    --option-border-color: #E2E2E2;
+    --post-background: #F6F6F6;
+}
