@@ -1,4 +1,4 @@
-@import "../../../variables";
+@import "../../../sass/variables";
 
 header {
     background: var(--primary-color);
@@ -32,7 +32,12 @@ header {
                 color: white;
                 border: 1px solid white;
                 padding: 5px 25px;
+                display: none;
                 border-radius: 8px;
+
+                @include desktop {
+                    display: block;
+                }
             }
 
             ul.options {

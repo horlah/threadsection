@@ -5,7 +5,7 @@
         </a>
     </div>
     <nav class="nav">
-        <li>
+        <li class="header_post_btn">
             <button (click)="postModal = true">Post</button>
         </li>
         <li>
@@ -102,12 +102,12 @@
     </div>
 </div>
 
-<button class="add">
+<button class="add" (click)="postModal = true">
     <div>+</div>
 </button>
 
 <div class="overlay" *ngIf="postModal">
-    <div class="modal post_thread">
+    <div class="modal full">
         <form>
             <div class="head">
                 <button type="button" (click)="postModal = false">×</button>

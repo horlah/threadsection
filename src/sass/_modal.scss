@@ -1,0 +1,187 @@
+.overlay {
+    background: rgba(black, .5);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+
+    @include desktop {
+        overflow: auto;
+    }
+
+    .modal {
+        background: white;
+        border-radius: 17px;
+        width: 60%;
+        padding: 45px 30px 60px;
+        position: relative;
+        margin-top: 40px;
+        overflow: auto;
+
+        @include desktop {
+            margin-top: 60px;
+            width: 30%;
+        }
+
+        &.full {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            width: initial;
+            border-radius: 0;
+
+            @include desktop {
+                width: 30%;
+                position: relative;
+                margin-top: 40px;
+                border-radius: 17px;
+            }
+        }
+
+        h3 {
+            color: var(--primary-color);
+        }
+
+        .input {
+            margin: 30px 0;
+
+            input {
+                border: none;
+                border-bottom: 1px solid var(--input-border-color);
+                width: 100%;
+                padding: 3px;
+                font-size: .9rem;
+            }
+
+            textarea {
+                background: var(--post-background);
+                border: none;
+                width: calc(100% - 30px);
+                height: 80px;
+                border-radius: 8px;
+                padding: 15px;
+            }
+
+            select {
+                width: 100%;
+                padding: 15px 0 15px 10px;
+                background: var(--post-background);
+                border: none;
+            }
+        }
+
+        .input_btn {
+            text-align: center;
+
+            input[type=submit] {
+                width: 85%;
+                background: var(--primary-color);
+                color: white;
+                padding: 8px 0;
+                border-radius: 9px;
+                border: none;
+            }
+        }
+
+        .close_modal {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 1.3rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+
+            &.fixed {
+                position: fixed;
+
+                @include desktop {
+                    position: absolute;
+                }
+            }
+        }
+
+        .media {
+            display: flex;
+            justify-content: space-between;
+
+            & > div {
+                &:first-child {
+                    display: flex;
+
+                    div {
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+
+        form .head {
+            position: absolute;
+            top: 20px;
+            display: flex;
+            width: calc(100% - 60px);
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+
+            button {
+                border: none;
+                font-size: 1.3rem;
+                background: transparent;
+            }
+
+            input[type = 'submit'] {
+                border: none;
+                background: var(--primary-color);
+                border-radius: 8px;
+                padding: 8px 25px;
+                color: white;
+            }
+        }
+
+        section.posts {
+            padding: 0;
+            margin: 10px 0;
+            background: transparent;
+            width: initial;
+        }
+
+        .comments {
+            background: var(--post-background);
+            margin-top: 30px;
+
+            section.posts {
+                padding: 10px;
+                margin: 10px 0;
+            }
+        }
+
+        .reply {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            @include desktop {
+                display: none;
+            }
+
+            input {
+                width: 100%;
+                background: var(--input-border-color);
+                border: none;
+                padding: 20px 5px;
+                font-size: .8rem;
+            }
+        }
+    }
+}
