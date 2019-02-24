@@ -1,0 +1,43 @@
+<section class="posts">
+    <div class="user_display_picture">
+        <img src="assets/icons/user.png" alt="User Display Picture">
+    </div>
+    <div class="details">
+        <div class="head">
+            <div class="name">
+                <h4>{{post.name}} <span>• {{post.time}} • #{{post.tag}}</span></h4>
+            </div>
+            <div class="options">
+                <img src="assets/icons/option_bar.png" alt="options">
+            </div>
+        </div>
+        <div class="post" (click)="showPostModal(post)">
+            <p>
+                {{post.post_text}}
+            </p>
+        </div>
+        <div class="post_actions">
+            <div class="left">
+                <div class="like">
+                    <img src="assets/icons/like.png" alt="like icon">
+                    <div>{{post.likes}}</div>
+                </div>
+                <div class="comment">
+                    <img src="assets/icons/comment_box.png" alt="comment icon">
+                    <div>{{post.comments}}</div>
+                </div>
+                <div class="share">
+                    <img src="assets/icons/share.png" alt="share icon">
+                </div>
+                <div class="dislike">
+                    <img src="assets/icons/dislike_icon.png" alt="dislike icon">
+                </div>
+            </div>
+            <div class="right">
+                <div class="bookmark">
+                    <img src="assets/icons/bookmark_black_shape.png" alt="bookmark icon">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
