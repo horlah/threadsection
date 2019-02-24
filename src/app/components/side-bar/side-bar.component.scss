@@ -3,19 +3,42 @@ ul {
     text-align: center;
 
     li {
+        padding: 24px 25px;
+        color: var(--text-color);
         border-bottom: 1px solid var(--option-border-color);
-        padding: 18px 25px;
 
-        a {
-            color: var(--text-color);
-            font-size: .8rem;
+        &._trending, &#one {
+            border-bottom: none;
+        }
 
-            &.active {
-
-            }
+        &._trending {
+            background: var(--primary-color);
+            border-radius: 20px 0 0 20px;
+            margin-left: 10px;
+            color: white;
+            position: relative;
 
             img {
-                width: 40%;
+                width: 30%;
+            }
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                background: var(--primary-color);
+                top: 0;
+                bottom: 0;
+                right: -11px;
+                width: 13px
+            }
+        }
+
+        a {
+            color: inherit;
+            font-size: .8rem;
+
+            img {
+                width: 30%;
             }
 
             p {
@@ -28,17 +51,25 @@ ul {
         background: var(--primary-color);
         margin-left: 10px;
         color: #fff;
-        padding: 20px;
+        padding: 50px 20px;
         width: 140px;
+        overflow: auto;
 
         h3 {
             font-size: 1rem;
             margin-bottom: 10px;
+            text-align: left;
+            padding-left: 15px;
         }
 
         li {
-            padding: 20px 10px;
+            padding: 25px 10px;
             position: relative;
+            color: white;
+
+            &#t_one {
+                border-top: 1px solid var(--option-border-color);
+            }
 
             span {
                 font-weight: bold;

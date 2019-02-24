@@ -7,10 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
     @Input('loginState') loginState: boolean;
+    rootElement = <HTMLElement>document.getElementsByTagName('html')[0];
 
     constructor() { }
 
     ngOnInit() {
+        console.log(this.rootElement);
     }
 
 }

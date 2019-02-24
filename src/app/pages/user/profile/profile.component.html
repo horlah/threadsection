@@ -1,0 +1,37 @@
+<section class="user_info">
+    <div>
+        <div class="user_dp">
+            <!--<img src="#" alt="user dp">-->
+        </div>
+        <h3>Olajide Bamidele nelson</h3>
+        <p class="user_name">@Bamidele_utu</p>
+        <p class="about">Journalist, Manager, Environmentalist</p>
+        <p class="posts_stat">50k <span>Total post</span> 50k <span>Total views</span></p>
+        <p class="wallet_digit">Wallet Balance: <span>60,000 NGN</span></p>
+    </div>
+    <div class="others">
+        <a href="#">
+            <img src="assets/icons/notification_icon.png" alt="notification icon">
+        </a>
+        <a href="#">
+            <div>Share Profile</div>
+        </a>
+    </div>
+</section>
+
+<nav>
+    <div>
+        <div>All post</div>
+        <div></div>
+    </div>
+    <div>
+        <div>All Threads</div>
+        <div></div>
+    </div>
+    <div>
+        <div>All Video</div>
+        <div></div>
+    </div>
+</nav>
+
+<app-post *ngFor="let post of posts" [post]="post"></app-post>
